@@ -2,118 +2,59 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Sigmar&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-
-    <title><weather-project></weather-project></title>
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Meteo App</title>
 </head>
 
 <body>
-    <div class="weather-app" <header>
-        <form class="search-form" id="search-form">
-            <input type="search" placeholder="Enter a City.." required id="search-form-input"
-                class="search-form-input" />
-            <input type="Submit" value="search" class="search-form-button" />
-        </form>
+    <div class="weather-app">
+        <header>
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="Enter a city.." required id="search-form-input"
+                    class="search-form-input" />
+                <input type="submit" value="Search" class="search-form-button" />
+            </form>
         </header>
         <main>
             <div class="weather-app-data">
-
                 <div>
-                    <h1 class="weather-app-city" id="city">Arizona</h1>
+                    <h1 class="weather-app-city" id="city"></h1>
                     <p class="weather-app-details">
-                        <span id="time"></span>
-                        <span id="description"></span> cloudy
+                        <span id="time"></span>,
+                        <span id="description"></span>
                         <br />
-                        Humidity: <strong id="humidity"></strong>, wind: <strong id="wind-speed"></strong>
+                        Humidity: <strong id="humidity"></strong>, Wind:
+                        <strong id="wind-speed"></strong>
                     </p>
                 </div>
                 <div class="weather-app-temperature-container">
                     <div id="icon"></div>
-                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png"
-                        class="weather-app-icon" />
-
                     <div class="weather-app-temperature" id="temperature"></div>
-                    <div class="weather-app-unit"> &#8457 </div>
+                    <div class="weather-app-unit">°C</div>
                 </div>
             </div>
-            <div class="weather-forecast">
-                <div class="weather-forcast-day">
-                    <div class="weather-forcast-date">Tue</div>
-                    <div class="weather-forecast-icon"> &#8457</div>
-                    <div class="weather-forecast-temperatures"></div>
-                    <div class="weather-forecast-temperature">
-                        <strong>15</strong>
-                    </div>
-                    <div class="weather-forecast-temperatures">9&deg</div>
-                </div>
-            </div>
-            <div class="weather-forcast-day">
-                <div class="weather-forcast-date">Wed</div>
-                <div class="weather-forecast-icon"> &#8457</div>
-                <div class="weather-forecast-temperatures"></div>
-                <div class="weather-forecast-temperature">
-                    <strong>15</strong>
-                </div>
-                <div class="weather-forecast-temperatures">9&deg</div>
-            </div>
-    </div>
-    <div class="weather-forcast-day">
-        <div class="weather-forcast-date">Thurs</div>
-        <div class="weather-forecast-icon"> &#8457</div>
-        <div class="weather-forecast-temperatures"></div>
-        <div class="weather-forecast-temperature">
-            <strong>15</strong>
-        </div>
-        <div class="weather-forecast-temperatures">9&deg</div>
-    </div>
-    </div>
-    <div class="weather-forcast-day">
-        <div class="weather-forcast-date">Fri</div>
-        <div class="weather-forecast-icon"> &#8457</div>
-        <div class="weather-forecast-temperatures"></div>
-        <div class="weather-forecast-temperature">
-            <strong>15</strong>
-        </div>
-        <div class="weather-forecast-temperatures">9&deg</div>
-    </div>
-    </div>
-    <div class="weather-forcast-day">
-        <div class="weather-forcast-date">Sat</div>
-        <div class="weather-forecast-icon"> &#8457</div>
-        <div class="weather-forecast-temperatures"></div>
-        <div class="weather-forecast-temperature">
-            <strong>15</strong>
-        </div>
-        <div class="weather-forecast-temperatures">9&deg</div>
-    </div>
-    </div>
+            <div class="weather-forecast" id="forecast"></div>
+        </main>
 
-    </main>
-
-    <h1>Welcome to the Weather App</h1>
-
-    <footer>
-        Coded by
-        <a href="https://github.com/amandawiggins"> Amanda Wiggins</a>
-        Hosted on
-        <a href="https://github.com/amandawiggins/weather-project"> Github</a>
-        and hosted on
-        <a href="https://amandas-weather-app.netlify.app/"> Netlify</a>
-    </footer>
+        <footer>
+            Coded by
+            <a href="https://github.com/amandawiggins"> Amanda Wiggins</a>
+            Hosted on
+            <a href="https://github.com/amandawiggins/weather-project"> Github</a>
+            and hosted on
+            <a href="https://amandas-weather-app.netlify.app/"> Netlify</a>
+        </footer>
 
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
